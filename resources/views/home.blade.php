@@ -4,18 +4,18 @@
     <div class="container">
 
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Questions</div>
-                    <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
+                    <a class="btn btn-primary float-right" href="{{ route('question.create') }}">
                         Create a Question
                     </a>
 
                     <div class="card-body">
 
-                        <div class="card-dack">
+                        <div class="card-deck">
                             @foreach($questions as $question)
-                                <div class="col-lg-12 d-flex align-items-stretch">
+                                <div class="col-lg-4 d-flex align-items-stretch">
                                     <div class="card mb-3">
                                         <div class="card-header">
                                             <small class="text-muted">
@@ -30,7 +30,7 @@
                                         <div class="card-footer">
                                             <p class="card-text">
 
-                                                <a class="btn btn-primary float-right" href="{{ route('questions.show', ['id' => $question->id]) }}">
+                                                <a class="btn btn-primary float-right" href="{{ route('question.show', ['id' => $question->id]) }}">
                                                     View
                                                 </a>
                                             </p>
@@ -38,6 +38,7 @@
                                     </div>
                                 </div>
                             @endforeach
+
                         </div>
                     </div>
                     <div class="card-footer">
