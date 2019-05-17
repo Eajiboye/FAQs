@@ -5,22 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        @if($edit === FALSE)
-                            Create Question
-                        @else()
-                            Edit Question
-                        @endif
-
-                    </div>
-
+                    <div class="card-header">Create Question</div>
                     <div class="card-body">
-
                         @if($edit === FALSE)
-
                             {!! Form::model($question, ['action' => 'QuestionController@store']) !!}
                         @else()
-
                             {!! Form::model($question, ['route' => ['questions.update', $question->id], 'method' => 'patch']) !!}
                         @endif
                         <div class="form-group">
